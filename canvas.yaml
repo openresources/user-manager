@@ -1,0 +1,27 @@
+preset: package
+
+namespace: Openresources\UserManager
+user-auth-provider: App\User
+
+paths:
+  src: src
+  resource: resources
+
+factory:
+  path: database/factories
+
+migration:
+  path: database/migrations
+  prefix: ''
+
+console:
+  namespace: Openresources\UserManager\Console
+
+model:
+  namespace: Openresources\UserManager
+
+provider:
+  namespace: Openresources\UserManager\Providers
+
+testing:
+  namespace: Openresources\UserManager\Tests
