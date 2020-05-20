@@ -5,3 +5,4 @@ vendor
 coverage
 .vscode
 .history/
+node_modules

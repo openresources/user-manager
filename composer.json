@@ -45,7 +45,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Openresources\\UserManager\\UserManagerServiceProvider"
+                "Openresources\\UserManager\\UserManagerServiceProvider",
+                "Openresources\\UserManager\\Providers\\ComponentServiceProvider"
             ],
             "aliases": {
                 "UserManager": "Openresources\\UserManager\\UserManagerFacade"
