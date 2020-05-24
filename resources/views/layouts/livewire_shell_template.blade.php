@@ -11,7 +11,7 @@
                 <li class="flex-grow"><a class="block rounded text-center hover:text-white hover:bg-orange-700 p-3" href="http://">Add user</a></li>
                 <li class="flex-grow"><a class="block rounded text-center hover:text-white hover:bg-orange-700 p-3" href="http://">Roles</a></li>
                 <li class="flex-grow"><a class="block rounded text-center hover:text-white hover:bg-orange-700 p-3" href="http://">Groups</a></li>
-                <li class="flex-grow"><a class="block rounded text-center hover:text-white hover:bg-orange-700 p-3" href="{{ route('user-manager.bulk-actions.index') }}">Bulk actions</a></li>
+                <li class="flex-grow"><a class="block rounded text-center hover:text-white hover:bg-orange-700 p-3" href="{{ route('user-manager.bulk.index') }}">Bulk actions</a></li>
             </ul>
         </div>
     </nav>

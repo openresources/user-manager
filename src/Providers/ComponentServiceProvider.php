@@ -27,6 +27,6 @@ class ComponentServiceProvider extends ServiceProvider
     public function boot()
     {
         Livewire::component('user-manager::user-manager.home', Home::class);
-        Livewire::component('user-manager::user-manager.bulk-actions.index', Index::class);
+        Livewire::component('user-manager::user-manager.bulk.index', Index::class);
     }
 }

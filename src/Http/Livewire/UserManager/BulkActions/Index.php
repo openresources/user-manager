@@ -2,8 +2,10 @@
 
 namespace Openresources\UserManager\Http\Livewire\UserManager\BulkActions;
 
-use App\User;
+use Openresources\UserManager\Imports\UsersImport;
+use Maatwebsite\Excel\Facades\Excel;
 use Livewire\Component;
+use App\User;
 
 class Index extends Component
 {
@@ -16,6 +18,8 @@ class Index extends Component
 
     public function render()
     {
-        return view('user-manager::livewire.user-manager.bulk-actions.index', ['users' => $this->users]);
+        return view('user-manager::livewire.user-manager.bulk.index', ['users' => $this->users]);
     }
+
+
 }
