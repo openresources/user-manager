@@ -1,3 +1,48 @@
+.alert {
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+  .alert-error {
+    --bg-opacity: 1;
+    background-color: #fed7d7;
+    background-color: rgba(254, 215, 215, var(--bg-opacity));
+    --text-opacity: 1;
+    color: #c53030;
+    color: rgba(197, 48, 48, var(--text-opacity));
+  }
+  .alert-success {
+    --bg-opacity: 1;
+    background-color: #c6f6d5;
+    background-color: rgba(198, 246, 213, var(--bg-opacity));
+    --text-opacity: 1;
+    color: #2f855a;
+    color: rgba(47, 133, 90, var(--text-opacity));
+  }
+
+.button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.button-primary {
+    --bg-opacity: 1;
+    background-color: #2b6cb0;
+    background-color: rgba(43, 108, 176, var(--bg-opacity));
+    --text-opacity: 1;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+  }
+
+.button-small {
+  }
+
 .menu-item.card {
   display: flex;
   flex: 1 1 0%;
@@ -14,12 +59,14 @@
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-  .menu-item.card:hover {
+
+.menu-item.card:hover {
     --bg-opacity: 1;
     background-color: #e2e8f0;
     background-color: rgba(226, 232, 240, var(--bg-opacity));
   }
-  .menu-item.card .menu-item--link {
+
+.menu-item.card .menu-item--link {
     text-align: center;
     display: block;
     width: 100%;
@@ -29,7 +76,8 @@
     justify-content: center;
     align-items: center;
   }
-  .menu-item.card .menu-item--description {
+
+.menu-item.card .menu-item--description {
     font-weight: 500;
     padding-top: 0.75rem;
   }

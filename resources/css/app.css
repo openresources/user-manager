@@ -1,3 +1,28 @@
+.alert {
+    @apply block p-2 mb-3 rounded shadow;
+
+    &-error {
+        @apply bg-red-200 text-red-700;
+    }
+
+    &-success {
+        @apply bg-green-200 text-green-700;
+    }
+}
+
+.button {
+
+    @apply py-2 px-4 rounded shadow;
+    
+    &-primary {
+        @apply bg-blue-700 text-white;
+    }
+
+    &-small {
+
+    }
+}
+
 .menu-item.card {
 
     @apply flex flex-1 flex-col items-center justify-center rounded shadow bg-gray-200 mr-10 mb-10 py-10;

@@ -3,7 +3,7 @@
 namespace Openresources\UserManager\Providers;
 
 use Openresources\UserManager\Http\Livewire\UserManager\Home;
-use Openresources\UserManager\Http\Livewire\UserManager\BulkActions\Index;
+use Openresources\UserManager\Http\Livewire\UserManager\Bulk\Index;
 use Livewire\Livewire;
 use Illuminate\Support\ServiceProvider;
 

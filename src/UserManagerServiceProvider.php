@@ -35,6 +35,11 @@ class UserManagerServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/dist' => public_path('vendor/user-manager'),
             ], 'user-manager:assets');
 
+            // Publishing samples.
+            $this->publishes([
+                __DIR__.'/../storage' => storage_path('app/samples'),
+            ], 'user-manager:samples');
+
             // Publishing the translation files.
             /*$this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/user-manager'),

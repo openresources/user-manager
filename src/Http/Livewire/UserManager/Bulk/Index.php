@@ -1,6 +1,6 @@
 <?php
 
-namespace Openresources\UserManager\Http\Livewire\UserManager\BulkActions;
+namespace Openresources\UserManager\Http\Livewire\UserManager\Bulk;
 
 use Openresources\UserManager\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;

@@ -15,6 +15,19 @@ You can install the package via composer:
 composer require openresources/user-manager
 ```
 
+## Post-install Tasks
+
+Publish the package files using the following
+
+```bash
+art vendor:publish --tag=user-manager:samples
+```
+
+```bash
+art vendor:publish --tag=user-manager:assets
+```
+
+
 ## Usage
 
 ``` php

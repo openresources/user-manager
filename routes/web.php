@@ -5,12 +5,21 @@ Route::middleware('web')->group(function () {
         ->name('user-manager.')
         ->group(function () {
             route::middleware('auth')->group(function () {
+                Route::namespace('Openresources\UserManager\Http\Controllers')->group(function () {
+                    Route::get('bulk/samples', 'Bulk\SamplesController@index')
+                        ->name('bulk.samples.index');
+
+                    Route::post('bulk/imports', 'Bulk\UserImportController@store')
+                        ->name('bulk.imports.index');
+                });
+
                 Route::livewire('/', 'user-manager::user-manager.home')
                     ->layout(config('user-manager.livewire_shell_template'))
                     ->name('index');
-                Route::livewire('/bulk-actions', 'user-manager::user-manager.bulk-actions.index')
+
+                Route::livewire('/bulk', 'user-manager::user-manager.bulk.index')
                     ->layout(config('user-manager.livewire_shell_template'))
-                    ->name('bulk-actions.index');
+                    ->name('bulk.index');
             });
         });
 });
