@@ -21,6 +21,14 @@
     color: #2f855a;
     color: rgba(47, 133, 90, var(--text-opacity));
   }
+  .alert-warning {
+    --bg-opacity: 1;
+    background-color: #feebc8;
+    background-color: rgba(254, 235, 200, var(--bg-opacity));
+    --text-opacity: 1;
+    color: #c05621;
+    color: rgba(192, 86, 33, var(--text-opacity));
+  }
 
 .button {
   padding-top: 0.5rem;

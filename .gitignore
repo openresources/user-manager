@@ -1,8 +1,9 @@
+.history/
+.samples/
+.vscode
 build
 composer.lock
-docs
-vendor
 coverage
-.vscode
-.history/
+docs
 node_modules
+vendor

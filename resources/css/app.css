@@ -4,9 +4,13 @@
     &-error {
         @apply bg-red-200 text-red-700;
     }
-
+    
     &-success {
         @apply bg-green-200 text-green-700;
+    }
+
+    &-warning {
+        @apply bg-orange-200 text-orange-700;
     }
 }
 

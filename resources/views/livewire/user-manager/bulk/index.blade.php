@@ -78,10 +78,7 @@
             </div>
 
             <div x-cloak>
-                @include('user-manager::partials.modals.user_import', [
-                'modalVariable' => 'showUserImportModal',
-                'data' => 'foo' ]
-                )
+                @include('user-manager::partials.modals.user_import')
             </div>
 
         </div>

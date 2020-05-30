@@ -7,15 +7,37 @@ use Livewire\Component;
 
 class Home extends Component
 {
-    protected $users;
-
+    public $users;
+    public $ids = [];
+    protected $selectedUsers;
     public function mount()
     {
-        $this->users = User::get();
+        $this->users = User::with('role')->get(['id', 'name', 'email', 'role']);
     }
 
     public function render()
     {
-        return view('user-manager::livewire.user-manager.home', ['users' => $this->users]);
+        return view('user-manager::livewire.user-manager.home', [
+            'selectedUsers' => collect($this->selectedUsers),
+        ]);
+    }
+
+    public function delete()
+    {
+        $countDeletedUsers = User::destroy(collect($this->filteredIds()));
+        session()->flash('status', "{$countDeletedUsers} Users removed successfully");
+        return redirect()->route('user-manager.index');
+    }
+
+    public function updateSelectedUsers()
+    {
+        $this->selectedUsers = collect(User::find($this->filteredIds()));
+    }
+
+    protected function filteredIds()
+    {
+        return collect($this->ids)->filter(function ($value, $key) {
+            return $value != false;
+        })->keys()->toArray();
     }
 }
