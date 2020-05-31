@@ -33,6 +33,6 @@ class UsersImport implements OnEachRow, WithHeadingRow
             'password' => Hash::make($row['password'])
         ]);
 
-        Mail::to($row['email'])->send(new AccountCreated($row['name']));
+        Mail::to($row['email'])->queue(new AccountCreated($row['name']));
     }
 }
