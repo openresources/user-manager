@@ -17,6 +17,8 @@ composer require openresources/user-manager
 
 ## Post-install Tasks
 
+### Publish package files
+
 Publish the package files using the following
 
 ```bash
@@ -27,6 +29,29 @@ art vendor:publish --tag=user-manager:samples
 art vendor:publish --tag=user-manager:assets
 ```
 
+### Configure email queues
+
+Email queues are necessary if you will be importing large numbers of users.
+
+#### Setup a database queue driver
+
+For a quick setup we'll document the setup using the database queue driver.. Feel free to use any of the others. See the [Laravel Documentation]("https://laravel.com/docs/7.x/queues#driver-prerequisites") for further instructions.
+
+1. Create queue table for queued jobs and run migration.
+
+    ```bash
+    php artisan queue:table
+
+    php artisan migrate
+    ```
+
+1. Update the QUEUE_CONNECTION setting in your project's .env file
+
+    `QUEUE_CONNECTION=database`
+
+1. If it isn't running already start the laravel queue worker
+
+    `php artisan queue:work`
 
 ## Usage
 
