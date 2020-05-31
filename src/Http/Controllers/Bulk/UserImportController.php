@@ -2,10 +2,11 @@
 
 namespace Openresources\UserManager\Http\Controllers\Bulk;
 
-use Illuminate\Http\Request;
-use Maatwebsite\Excel\Facades\Excel;
-use Openresources\Resume\Http\Controllers\Controller;
 use Openresources\UserManager\Imports\UsersImport;
+use Openresources\UserManager\Http\Controllers\Controller;
+
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Http\Request;
 
 class UserImportController extends Controller
 {
