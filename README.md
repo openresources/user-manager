@@ -24,23 +24,15 @@ composer require openresources/user-manager
 
 ### Tasks
 
-1. **Configure template for livewire components**
+1. **Set Environment Variables**
 
-    Provide a LIVEWIRE_CONTENT_TEMPLATE variable in your project's .env file.
-    The value for the variable should be the name of a blade template that declares a 'page' section which yields a 'content' section.
-    e.g.
+   `APP_SCAFFOLD_TEMPLATE="layouts.scaffold"`
 
-    ```blade
-    @section('page')
-    <div>
-        @yield('content')
-    </div>
-    @endsection
-    ```
+   `APP_SHELL_TEMPLATE="layouts.app_shell"`
 
-   ```env
-    LIVEWIRE_CONTENT_TEMPLATE=template_for_content_section
-    ```
+    *Note:
+      -- The layouts.scaffold blade template defines a 'scaffold' section enclosing a @yield('page') directive.
+      -- While the layouts.app_shell blade template defines a 'page' section enclosing a @yield('content') directive.*
 
 1. **Publish package files**
 
