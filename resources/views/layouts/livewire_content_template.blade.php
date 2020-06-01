@@ -1,4 +1,4 @@
-@extends('user-manager::layouts.scaffold')
+@extends(config('user-manager.app_scaffold_template'))
 
 @push('vendor-assets')
 <link href="{{ asset('vendor/user-manager/css/app.css') }}" rel="stylesheet">
