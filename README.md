@@ -15,18 +15,24 @@ You can install the package via composer:
 composer require openresources/user-manager
 ```
 
-## Post-install Tasks
+## Post-install Tasks & Requirements
+
+### Requirements
+
+1. Roles relationship in the User module
+2. Queues enabled for email sending
+
 
 ### Publish package files
 
 Publish the package files using the following
 
 ```bash
-art vendor:publish --tag=user-manager:samples
+php artisan vendor:publish --tag=user-manager:samples
 ```
 
 ```bash
-art vendor:publish --tag=user-manager:assets
+php artisan vendor:publish --tag=user-manager:assets
 ```
 
 ### Configure email queues
