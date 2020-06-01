@@ -14,11 +14,11 @@ Route::middleware('web')->group(function () {
                 });
 
                 Route::livewire('/', 'user-manager::user-manager.home')
-                    ->layout(config('user-manager.livewire_shell_template'))
+                    ->layout(config('user-manager.livewire_content_template'))
                     ->name('index');
 
                 Route::livewire('/bulk', 'user-manager::user-manager.bulk.index')
-                    ->layout(config('user-manager.livewire_shell_template'))
+                    ->layout(config('user-manager.livewire_content_template'))
                     ->name('bulk.index');
             });
         });

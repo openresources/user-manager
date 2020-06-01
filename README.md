@@ -22,42 +22,61 @@ composer require openresources/user-manager
 1. Roles relationship in the User module
 2. Queues enabled for email sending
 
+### Tasks
 
-### Publish package files
+1. **Configure template for livewire components**
 
-Publish the package files using the following
+    Provide a LIVEWIRE_CONTENT_TEMPLATE variable in your project's .env file.
+    The value for the variable should be the name of a blade template that declares a 'page' section which yields a 'content' section.
+    e.g.
 
-```bash
-php artisan vendor:publish --tag=user-manager:samples
-```
-
-```bash
-php artisan vendor:publish --tag=user-manager:assets
-```
-
-### Configure email queues
-
-Email queues are necessary if you will be importing large numbers of users.
-
-#### Setup a database queue driver
-
-For a quick setup we'll document the setup using the database queue driver.. Feel free to use any of the others. See the [Laravel Documentation]("https://laravel.com/docs/7.x/queues#driver-prerequisites") for further instructions.
-
-1. Create queue table for queued jobs and run migration.
-
-    ```bash
-    php artisan queue:table
-
-    php artisan migrate
+    ```blade
+    @section('page')
+    <div>
+        @yield('content')
+    </div>
+    @endsection
     ```
 
-1. Update the QUEUE_CONNECTION setting in your project's .env file
+   ```env
+    LIVEWIRE_CONTENT_TEMPLATE=template_for_content_section
+    ```
 
-    `QUEUE_CONNECTION=database`
+1. **Publish package files**
 
-1. If it isn't running already start the laravel queue worker
+    Publish the package files using the following
 
-    `php artisan queue:work`
+    ```bash
+    php artisan vendor:publish --tag=user-manager:samples
+    ```
+
+    ```bash
+    php artisan vendor:publish --tag=user-manager:assets
+    ```
+
+1. **Configure email queues**
+
+    Email queues are necessary if you will be importing large numbers of users.
+
+    1. Setup\Configure a database queue driver
+
+        For a quick setup we'll document the setup using the database queue driver.. Feel free to use any of the others. See the [Laravel Documentation]("https://laravel.com/docs/7.x/queues#driver-prerequisites") for further instructions.
+
+        a. Create queue table for queued jobs and run migration.
+
+        ```bash
+        php artisan queue:table
+
+        php artisan migrate
+        ```
+
+    1. Update the QUEUE_CONNECTION setting in your project's .env file
+
+        `QUEUE_CONNECTION=database`
+
+    1. If it isn't running already start the laravel queue worker
+
+        `php artisan queue:work`
 
 ## Usage
 
