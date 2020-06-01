@@ -1,8 +1,13 @@
 @extends('user-manager::layouts.scaffold')
 
+@push('vendor-assets')
+<link href="{{ asset('vendor/user-manager/css/app.css') }}" rel="stylesheet">
+<script src="{{ asset('vendor/user-manager/js/app.js') }}" defer></script>
+@endpush
+
 @push('styles')
 <livewire:styles>
-    @endpush
+@endpush
 
     @section('page')
     <nav class="menu-bar" role="menubar">
@@ -39,7 +44,6 @@
     </section>
     @endsection
 
-
     @push('scripts')
     <livewire:scripts>
-        @endpush
+    @endpush

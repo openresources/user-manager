@@ -11,8 +11,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/user-manager/css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('vendor/user-manager/js/app.js') }}" defer></script>
+    @stack('vendor-assets')
     @stack('styles')
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
