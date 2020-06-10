@@ -12,7 +12,7 @@ class Home extends Component
     protected $selectedUsers;
     public function mount()
     {
-        $this->users = User::with('role')->get(['id', 'name', 'email', 'role']);
+        $this->users = User::with('role')->get();
     }
 
     public function render()
