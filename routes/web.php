@@ -1,6 +1,16 @@
 <?php
 
 Route::middleware('web')->group(function () {
+
+    Route::middleware('auth')->name('user.')->group(function () {
+        Route::namespace('Openresources\UserManager\Http\Controllers')->group(function () {
+
+            Route::prefix('account')->name('account.')->group(function () {
+                Route::get('/', 'User\Account\SettingsController@index')->name('settings');
+            });
+        });
+    });
+
     Route::prefix(config('user-manager.admin_prefix') . '/user-manager')
         ->name('user-manager.')
         ->group(function () {

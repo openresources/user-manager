@@ -1,4 +1,4 @@
-<nav class="bg-blue-900 shadow py-6" aria-labelledby="site-navigation">
+<nav class="bg-blue-900 shadow py-3" aria-labelledby="site-navigation">
     <div class="container mx-auto px-6 md:px-0">
         <div class="flex items-center justify-center">
             <div class="mr-6">
@@ -42,28 +42,25 @@
                             x-transition:leave="transition ease-in duration-300"
                             x-cloak>
                             
-                            <a href="#"
+                            <a href="{{ route('user.account.settings') }}"
                                 class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Account
                                 settings</a>
-                            @if ( auth()->user()->role && (auth()->user()->isAdmin || auth()->user()->role->name == 'admin'))
-                                <a href="{{ route('admin.index') }}"
-                                    class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Dashboard</a>
-                            @else
-                            
-                            <a href="#"
-                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Support</a>
-                            
-                            @endif
+                                
+                                @if ( auth()->user()->role && (auth()->user()->isAdmin || auth()->user()->role->name == 'admin'))
+                                    <a href="{{ route('admin.index') }}"
+                                        class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Dashboard</a>
+                                @else
+                                {{-- <a href="#"
+                                    class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Support</a> --}}
+                                @endif
 
-                            <a href="#" class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Sign
-                                out</a>
-                            <a href="{{ route('logout') }}"
-                                class="no-underline hover:underline px-4 py-2 text-gray-600 text-sm"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                                {{ csrf_field() }}
-                            </form>
+                                <a href="#"
+                                    class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white"
+                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Sign out') }}</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                    {{ csrf_field() }}
+                                </form>
+
                         </div>
                     </div>
 
