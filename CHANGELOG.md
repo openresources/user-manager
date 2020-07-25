@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/openresources/user-manager/compare/v1.3.7...v1.4.0) (2020-07-25)
+
+
+### Features
+
+* add account settings page and link ([a42773e](https://github.com/openresources/user-manager/commit/a42773e72a6e8e52f73dcfa327d9dfb003ab8d1b))
+
+
+### Bug Fixes
+
+* fix user import modal display issue ([d6982cf](https://github.com/openresources/user-manager/commit/d6982cfab4a8887630107247f0283ef899600eb7))
+
 ### [1.3.7](https://github.com/openresources/user-manager/compare/v1.3.6...v1.3.7) (2020-06-20)
 
 ### [1.3.6](https://github.com/openresources/user-manager/compare/v1.3.5...v1.3.6) (2020-06-10)
