@@ -14,15 +14,18 @@
         "release": "standard-version"
     },
     "devDependencies": {
-        "alpinejs": "^2.2.3",
         "cross-env": "^7.0.2",
         "laravel-mix": "^5.0.1",
+        "laravel-mix-purgecss": "^5.0.0",
         "postcss-nested": "^4.2.1",
         "standard-version": "^7.1.0",
         "tailwindcss": "^1.2.0",
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "purify-css": "^1.2.5"
+        "@tailwindcss/typography": "^0.2.0",
+        "alpinejs": "^2.2.3",
+        "purify-css": "^1.2.5",
+        "turbolinks": "^5.2.0"
     }
 }

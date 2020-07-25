@@ -1,49 +1,11 @@
-.alert {
-    @apply block p-2 mb-3 rounded shadow;
+@import "tailwindcss/base";
 
-    &-error {
-        @apply bg-red-200 text-red-700;
-    }
-    
-    &-success {
-        @apply bg-green-200 text-green-700;
-    }
+@import "tailwindcss/components";
 
-    &-warning {
-        @apply bg-orange-200 text-orange-700;
-    }
-}
+@import "typography.css";
 
-.button {
+@import "user_manager.css";
 
-    @apply py-2 px-4 rounded shadow;
-    
-    &-primary {
-        @apply bg-blue-700 text-white;
-    }
+@import "layout.css";
 
-    &-small {
-
-    }
-}
-
-.menu-item.card {
-
-    @apply flex flex-1 flex-col items-center justify-center rounded shadow bg-gray-200 mr-10 mb-10 py-10;
-
-    &:hover {
-        @apply bg-gray-300;
-    }
-
-    .menu-item--link {
-        @apply text-center block w-full h-full flex flex-col justify-center items-center;
-    }
-
-    .menu-item--description {
-        @apply font-medium pt-3;
-    }
-} 
-
-.round-icon {
-    @apply rounded-full h-20 w-20;
-}
+@import "tailwindcss/utilities";
