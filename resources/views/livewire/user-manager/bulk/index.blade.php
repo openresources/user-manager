@@ -3,7 +3,8 @@
 
     <div class="my-6">
         <h3 class="mb-1">Users</h3>
-        <div class="flex flex-wrap justify-between" x-data="{ 
+        <div class="flex flex-wrap justify-between" 
+             x-data="{ 
                     showUserImportModal: false,
                     showBulkDisableModal: false,
                     showAssignToGroupsModal: false,
@@ -12,8 +13,8 @@
 
             <div
                 class="menu-item card">
-                <a class="menu-item--link"
-                    @click="showUserImportModal = true" @keydown.escape="showUserImportModal = false" href="#">
+                <a class="menu-item--link" wire:click.prevent.default
+                x-on:click="showUserImportModal = true" @keydown.escape="showUserImportModal = false" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"
                         class="round-icon border border-teal-700 text-teal-700 fill-current">
                         <path
