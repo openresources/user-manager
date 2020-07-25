@@ -10,7 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @stack('vendor-assets')
     @stack('styles')
 
@@ -26,8 +25,18 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
     <div id="app">
-        @include('user-manager::partials.menus.site_nav')
-        @yield('scaffold')
+        <header>
+            @stack('site-nav')
+        </header>
+        <main>
+            <div>
+                @stack('sidebar') {{-- a container, ideally <nav>xyz</nav> --}}
+            </div>
+            @yield('scaffold')
+        </main>
+        <footer>
+            @yield('footer')
+        </footer>
     </div>
 
     <template x-cloak>
