@@ -3,7 +3,7 @@
         <div class="mr-6">
             <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                 @hasSection ('logo')
-                    <img src="@yield('logo') alt="{{ __('logo') }}">
+                    <img src="@yield('logo')" alt="{{ __('logo') }}">
                 @else
                 {{ config('app.name', 'Laravel') }}
                 @endif
