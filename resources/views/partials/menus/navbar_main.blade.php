@@ -12,7 +12,6 @@
         <div class="flex items-center justify-end flex-1 text-right">
             @guest
             <ul class="h-8 flex items-center">
-                @stack('guest-links')
                 <li>
                     <a class="no-underline hover:underline text-gray-300 text-sm p-3"
                         href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -21,8 +20,9 @@
                 <li>
                     <a class="no-underline hover:underline text-gray-300 text-sm p-3"
                         href="{{ route('register') }}">{{ __('Register') }}</a>
-                    @endif
                 </li>
+                @endif
+                @stack('guest-links')
             </ul>
             @else
             <div x-data="{ open: false }">
@@ -52,7 +52,7 @@
                                 settings</a>
                         </li>
 
-                        @if ( filled(auth()->user()->role_id) && (auth()->user()->isAdmin || auth()->user()->role->name
+                        @if ( filled(auth()->user()->role_id) && (auth()->user()->isAdmin || auth()->user()->role && auth()->user()->role->name
                         == 'admin'))
                         <li>
                             <a href="{{ route(config('app.admin_dashboard')) }}"
