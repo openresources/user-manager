@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.4](https://github.com/openresources/user-manager/compare/v1.4.3...v1.4.4) (2020-08-02)
+
+
+### Bug Fixes
+
+* fix admin link error when user has no role ([96e64c0](https://github.com/openresources/user-manager/commit/96e64c0143296a1a9a57a3f388727ba77a13afb8))
+
 ### [1.4.3](https://github.com/openresources/user-manager/compare/v1.4.2...v1.4.3) (2020-07-28)
 
 ### [1.4.2](https://github.com/openresources/user-manager/compare/v1.4.1...v1.4.2) (2020-07-28)
