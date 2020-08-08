@@ -29,7 +29,7 @@
     </style>
 </head>
 
-<body class="bg-gray-100 h-screen antialiased leading-none">
+<body class="bg-gray-100 antialiased leading-none">
     <div id="app">
         <header>
             @yield('navbar-main')
@@ -39,7 +39,7 @@
                 </nav>
             @endif
         </header>
-        <main>
+        <main id="scaffold">
             <div>
                 @stack('sidebar') {{-- a container, ideally <nav>xyz</nav> --}}
             </div>
