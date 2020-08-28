@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.5](https://github.com/openresources/user-manager/compare/v1.4.4...v1.4.5) (2020-08-28)
+
+
+### Bug Fixes
+
+* force file download ([d875741](https://github.com/openresources/user-manager/commit/d875741fedd1095810a13dd3a2761dddad40ccb9))
+
 ### [1.4.4](https://github.com/openresources/user-manager/compare/v1.4.3...v1.4.4) (2020-08-02)
 
 
