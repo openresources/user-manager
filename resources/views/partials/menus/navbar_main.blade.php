@@ -3,7 +3,7 @@
         <div class="mr-6">
             <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                 @hasSection ('logo')
-                    <img src="@yield('logo')" alt="{{ __('logo') }}">
+                <img src="@yield('logo')" alt="{{ __('logo') }}">
                 @else
                 {{ config('app.name', 'Laravel') }}
                 @endif
@@ -46,14 +46,8 @@
                         x-transition:enter-end="opacity-100 transform scale-100"
                         x-transition:leave="transition ease-in duration-300" x-cloak>
 
-                        <li>
-                            <a href="{{ route('user.account.settings') }}"
-                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Account
-                                settings</a>
-                        </li>
-
-                        @if ( filled(auth()->user()->role_id) && (auth()->user()->isAdmin || auth()->user()->role && auth()->user()->role->name
-                        == 'admin'))
+                        @if ( filled(auth()->user()->role_id) &&
+                        (auth()->user()->isAdmin || auth()->user()->role && auth()->user()->role->name == 'admin'))
                         <li>
                             <a href="{{ route(config('app.admin_dashboard')) }}"
                                 class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Dashboard</a>
@@ -64,6 +58,12 @@
                                             class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Support</a> 
                        </li> --}}
                         @endif
+                        @stack('profile-menu')
+                        <li>
+                            <a href="{{ route('user.account.settings') }}"
+                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Account
+                                settings</a>
+                        </li>
                         <li>
                             <a href="#"
                                 class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white"
