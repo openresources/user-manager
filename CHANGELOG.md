@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/openresources/user-manager/compare/v1.4.5...v1.5.0) (2020-08-31)
+
+
+### Features
+
+* add stack for profile links ([9e7249f](https://github.com/openresources/user-manager/commit/9e7249f111e931c5b382b72812eeff32c1123973))
+
 ### [1.4.5](https://github.com/openresources/user-manager/compare/v1.4.4...v1.4.5) (2020-08-28)
 
 
