@@ -30,13 +30,9 @@
                     <button
                         class="flex items-center focus:outline-none focus:border-transparent text-gray-300 text-sm focus:text-white"
                         x-on:click="open = !open">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-8 object-cover rounded-full overflow-hidden border-2 border-gray-300 focus:border-white mr-1"
-                            viewBox="0 0 473.935 473.935">
-                            <circle cx="236.967" cy="236.967" r="236.967" fill="#5E7CE2" />
-                            <path fill="#92B4F4"
-                                d="M236.952 473.935c78.533 0 148.115-38.222 191.232-97.058-8.011-11.48-39.525-45.025-145.593-70.548 0-24.082-2.398-38.507-2.398-38.507s31.289-43.337 33.691-103.513c0-9.568 4.7-77.436-77.017-80.508V83.7c-.202 0-.382.045-.602.045-.21 0-.385-.045-.595-.045v.101c-81.702 3.068-77.017 70.941-77.017 80.505 2.398 60.175 33.691 103.513 33.691 103.513s-2.417 14.425-2.417 38.507C86.664 331.174 54.08 363.623 45.044 375.908c43.06 59.378 112.953 98.027 191.908 98.027z" />
-                        </svg>
+                        <img class="h-8 object-cover rounded-full overflow-hidden border-1 border-gray-300 active:border-white focus:border-white mr-1"
+                            src="{{ Str::contains(Auth::user()->avatar, 'secure.gravatar.com')? : asset('vendor/resume/img/' . Auth::user()->avatar) }}"
+                            alt="{{ __('avatar') }}">
                         <span> {{ Auth::user()->name }}</span>
                     </button>
 
