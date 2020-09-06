@@ -31,7 +31,7 @@
                         class="flex items-center focus:outline-none focus:border-transparent text-gray-300 text-sm focus:text-white"
                         x-on:click="open = !open">
                         <img class="h-8 bg-gray-300 object-cover rounded-full overflow-hidden border-1 border-gray-300 active:border-white focus:border-white mr-1"
-                            src="{{Auth::user()->avatar? (Str::contains(Auth::user()->avatar, 'secure.gravatar.com')? : asset('vendor/resume/img/' . Auth::user()->avatar)) : asset('vendor/resume/img/users/default.svg') }}"
+                            src="{{Auth::user()->avatar? (Str::contains(Auth::user()->avatar, 'secure.gravatar.com')? Auth::user()->avatar : asset('vendor/resume/img/' . Auth::user()->avatar)) : asset('vendor/resume/img/users/default.svg') }}"
                             alt="{{ __('avatar') }}">
                         <span> {{ Auth::user()->name }}</span>
                     </button>
