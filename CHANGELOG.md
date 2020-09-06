@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.3](https://github.com/openresources/user-manager/compare/v1.5.2...v1.5.3) (2020-09-06)
+
+
+### Bug Fixes
+
+* fix broken profile image for gravatar image ([a5e5974](https://github.com/openresources/user-manager/commit/a5e5974f84bf00e76330f269f5f3fdf69f439f38))
+
 ### [1.5.2](https://github.com/openresources/user-manager/compare/v1.5.1...v1.5.2) (2020-09-03)
 
 ### [1.5.1](https://github.com/openresources/user-manager/compare/v1.5.0...v1.5.1) (2020-09-03)
