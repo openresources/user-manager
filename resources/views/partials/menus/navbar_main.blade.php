@@ -3,7 +3,10 @@
         <div class="mr-6">
             <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                 @hasSection ('logo')
-                <img src="@yield('logo')" alt="{{ __('logo') }}">  <span class="ml-5">{{ config('app.name', 'Laravel') }}</span>
+                <div class="flex">
+                    <img src="@yield('logo')" alt="{{ __('logo') }}" class="mr-4"> @if (config('app.show_branding'))
+                    <span class="ml-5">{{ config('app.name', 'Laravel') }}</span> @endif
+                </div>
                 @else
                 {{ config('app.name', 'Laravel') }}
                 @endif
@@ -46,20 +49,25 @@
                         (auth()->user()->isAdmin || auth()->user()->role && auth()->user()->role->name == 'admin'))
                         <li>
                             <a href="{{ route(config('app.admin_dashboard')) }}"
-                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Dashboard</a>
+                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">@lang('Dashboard')</a>
                         </li>
-                        @else
-                        {{-- <li>
-                                    <a href="#"
-                                            class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Support</a> 
-                       </li> --}}
                         @endif
+
                         @stack('profile-menu')
+
                         <li>
                             <a href="{{ route('user.account.settings') }}"
-                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">Account
-                                settings</a>
+                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">@lang('Account
+                                settings')</a>
                         </li>
+
+                        @if (config('app.support_route'))
+                        <li>
+                            <a href="{{ config('app.support_route') }}"
+                                class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white">@lang('Support')</a>
+                        </li>
+                        @endif
+
                         <li>
                             <a href="#"
                                 class="block px-4 py-2 text-gray-600 text-sm hover:bg-indigo-500 hover:text-white"
