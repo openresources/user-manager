@@ -1,6 +1,6 @@
 {
     "name": "user-manager",
-    "version": "1.5.5",
+    "version": "1.5.6",
     "repository": "git@github.com:openresources/user-manager.git",
     "author": "Eviano Afiemo <6235534+evianoa@users.noreply.github.com>",
     "license": "MIT",
