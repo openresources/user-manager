@@ -20,7 +20,11 @@ class UsersImport implements OnEachRow, WithHeadingRow
 
         $row = $row->toArray();
 
-        $user = User::where('email', $row['email'])->first();
+        $email = $row['email'] ?? $row[config('user-manager.bulk.imports.email_field')];
+
+        $password = $row['password'] ?? $row[config('user-manager.bulk.imports.password_field')] ?? 'SIMple^Password' ;
+
+        $user= User::where('email', $email)->first();
         
         if (! empty($user)) {
             return null;
@@ -29,10 +33,10 @@ class UsersImport implements OnEachRow, WithHeadingRow
 
         User::create([
             'name' => $row['name'],
-            'email' => $row['email'],
-            'password' => Hash::make($row['password'])
+            'email' => $email,
+            'password' => Hash::make($password)
         ]);
 
-        Mail::to($row['email'])->queue(new AccountCreated($row['name']));
+        Mail::to($email)->queue(new AccountCreated($row['name']));
     }
 }
